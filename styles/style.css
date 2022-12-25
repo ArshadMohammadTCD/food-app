@@ -42,8 +42,14 @@ body{
   position: relative;
 }
 
-.card:hover::before{
+.card:hover::before,
+.card:hover > .card-border{
   opacity: 1;
+}
+
+
+#cards:hover > .card > .card-border{
+  opacity:1;
 }
 
 .card::before{
@@ -59,7 +65,7 @@ body{
   top: 0px;
   transition: opacity 500ms;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 
@@ -74,7 +80,7 @@ body{
   top: 0px;
   transition: opacity 500ms;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .card > .card-content{
@@ -83,6 +89,6 @@ body{
   margin: 1px;
   height: calc(100% - 2px);
   width: calc(100% - 2px);
-  
+  z-index: 2;
 }
 
